@@ -28,6 +28,20 @@ nav li {
     height: 100%;
 }
 
+.content {
+    background-color: darkgrey;
+    height: 500px;
+    width: 100%;
+    border-bottom: solid 5px red;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
 #home {
     background-color: dodgerblue;
     float: left;
@@ -36,4 +50,7 @@ nav li {
     height: 100%;
     width: 20%;
     margin-right: auto;
+}
+
+#about {
 }
