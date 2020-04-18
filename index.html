@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
         <script src="main-vanilla.js" defer></script>
@@ -10,10 +11,23 @@
     <body>
 
         <nav id="nav-bar">
+            <div id="nav-drawer">
+                <input id="nav-input" type="checkbox" class="nav-unshown">
+                <label id="nav-open" for="nav-input"><span></span></label>
+                <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                <div id="nav-content">
+                    <ul id="nav-list-drawer">
+                        <a href="#profile"><li>Profile</li></a>
+                        <a href="#skills"><li>Skills</li></a>
+                        <a href="#works"><li>Works</li></a>
+                        <a href="#contact"><li>Contact</li></a>
+                    </ul>
+                </div>
+            </div>
             <div id="home">
                 あああああ
             </div>
-            <ul>
+            <ul id="nav-list-normal">
                 <a href="#profile"><li>Profile</li></a>
                 <a href="#skills"><li>Skills</li></a>
                 <a href="#works"><li>Works</li></a>
