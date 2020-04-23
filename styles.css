@@ -14,6 +14,30 @@
         margin: 0;
     }
 
+    .container {
+        background-color: #f4f5f7;
+        height: 750px;
+        width: 100%;
+        /* content 中央揃え */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        height: 80%;
+        width: 80%;
+    }
+
+    .fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* ナビゲーションバー */
+
     a {
         color: #333333;
         text-decoration: none;
@@ -56,29 +80,6 @@
         height: 100%;
     }
 
-    .container {
-        background-color: #f4f5f7;
-        height: 500px;
-        width: 100%;
-        /* content 中央揃え */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .content {
-        height: 80%;
-        width: 80%;
-        /* margin: 0 auto; */
-    }
-
-    .fixed {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-
     #home {
         background-color: f4f5f7;
         float: left;
@@ -91,6 +92,25 @@
 
     #nav-drawer {
         display: none;
+    }
+
+    /* 作品一覧 */
+
+    #work-container {
+        background-color: darkkhaki;
+        width: 100%;
+        height: auto;
+        /* flexbox設定 */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .work {
+        background-color: rgb(13, 99, 100);
+        width: 320px;
+        height: 180px;
+        margin: 10px 10px;
     }
 }
 
@@ -129,7 +149,7 @@
         background-color: #f4f5f7;
         list-style: none;
         line-height: 50px;
-        text-align: center;
+        text-align: left;
         float: left;
         width: 25%;
         height: 100%;
@@ -160,7 +180,6 @@
     .content {
         height: 80%;
         width: 80%;
-        /* margin: 0 auto; */
     }
 
     .fixed {
@@ -228,7 +247,7 @@
     #nav-close {
         display: none;/*はじめは隠しておく*/
         position: fixed;
-        z-index: 99;
+        z-index: 1;
         top: 0;/*全体に広がるように*/
         left: 0;
         width: 100%;
@@ -244,9 +263,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 9999;/*最前面に*/
+        z-index: 2;/*最前面に*/
         width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-        max-width: 330px;/*最大幅（調整してください）*/
+        max-width: 250px;/*最大幅（調整してください）*/
         height: 100%;
         background: #f4f5f7;/*背景色*/
         transition: .3s ease-in-out;/*滑らかに表示*/
@@ -257,7 +276,7 @@
     /*チェックが入ったらもろもろ表示*/
     #nav-input:checked ~ #nav-close {
         display: block;/*カバーを表示*/
-        opacity: .5;
+        opacity: 50%;
     }
     
     #nav-input:checked ~ #nav-content {
@@ -277,18 +296,15 @@
         padding: 0;
         margin-top: 0;
         margin-bottom: 0;
-        /* margin-left: auto; */
     }
 
     #nav-content li {
         background-color: #f4f5f7;
         list-style: none;
-        /* line-height: 50px; */
-        text-align: center;
-        /* float: left; */
+        text-align: left;
+        padding-left: 12%;
         width: 100%;
         height: 50px;
-        /* height: 100%; */
         transition: all 300ms 0s ease;
     }
 
@@ -296,10 +312,5 @@
         background-color: #333333;
         color: #f4f5f7;
         list-style: none;
-        /* line-height: 50px; */
-        text-align: center;
-        /* float: left; */
-        /* width: 100%; */
-        /* height: 100%; */
     }
 }
